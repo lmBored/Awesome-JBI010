@@ -1,5 +1,111 @@
-# Summary_For_Programming_Course
+# Summary For JBI010
 
+# Table of contents
+
+- [Algorithms](#algorithms)
+- [Programming languages](#programming-languages)
+- [Intepreter and compiler](#intepreter-and-compiler)
+- [Printing](#printing)
+- [Operators](#operators)
+- [Errors](#errors)
+- [However](#however)
+   * [Syntax error](#syntax-error)
+   * [Runtime error](#runtime-error)
+   * [Logic error](#logic-error)
+   * [Semantic error](#semantic-error)
+- [N.B.](#nb)
+- [Types](#types)
+- [Assign values to variables](#assign-values-to-variables)
+- [Names in Python](#names-in-python)
+- [Operations on string](#operations-on-string)
+- [Get user's input](#get-users-input)
+- [Boolean expressions](#boolean-expressions)
+- [Logical operators](#logical-operators)
+- [Special logical operators](#special-logical-operators)
+- [Condition](#condition)
+- [Try - Except:](#try-except)
+- [Pass, Continue, Break](#pass-continue-break)
+- [Indexing and slicing](#indexing-and-slicing)
+- [Sequence data type](#sequence-data-type)
+- [Some definitions about looping](#some-definitions-about-looping)
+- [List](#list)
+- [Here are some cool tricks with list:](#here-are-some-cool-tricks-with-list)
+- [String](#string)
+- [Here are some cool tricks with string:](#here-are-some-cool-tricks-with-string)
+- [Tuple](#tuple)
+- [Set](#set)
+- [Dictionary](#dictionary)
+- [Here are some cool tricks with dictionary](#here-are-some-cool-tricks-with-dictionary)
+- [Zipping](#zipping)
+- [File reading](#file-reading)
+- [While loop](#while-loop)
+- [For loop](#for-loop)
+- [Function](#function)
+- [Testing](#testing)
+   * [Assert](#assert)
+   * [Doctest](#doctest)
+   * [Pytest](#pytest)
+   * [IPytest](#ipytest)
+   * [Doctest vs Pytest](#doctest-vs-pytest)
+- [JSON](#json)
+- [CSV](#csv)
+   * [csv.reader()](#csvreader)
+   * [csv.writer()](#csvwriter)
+   * [csv.DictReader()](#csvdictreader)
+- [Comprehensions](#comprehensions)
+   * [List Comprehensions](#list-comprehensions)
+   * [Dictionary Comprehensions](#dictionary-comprehensions)
+   * [Set Comprehensions](#set-comprehensions)
+   * [Some cool tricks with comprehension](#some-cool-tricks-with-comprehension)
+- [Generator](#generator)
+- [Regular Expression (re)](#regular-expression-re)
+   * [Special Characters](#special-characters)
+   * [Character Classes](#character-classes)
+   * [Sets](#sets)
+- [But what if you can't remember everything of these](#but-what-if-you-cant-remember-everything-of-these)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+   * [Structured data](#structured-data)
+   * [Rectangular data](#rectangular-data)
+   * [Pandas](#pandas)
+   * [Location measures](#location-measures)
+      + [Another way to calculate those location measures in Python: statistics library](#another-way-to-calculate-those-location-measures-in-python-statistics-library)
+   * [Variability measures](#variability-measures)
+   * [Data distribution](#data-distribution)
+- [OOP](#oop)
+- [Class](#class)
+   * [Attributes](#attributes)
+   * [Methods](#methods)
+   * [Properties](#properties)
+   * [Decorator](#decorator)
+- [Recursion](#recursion)
+- [Recursive data types](#recursive-data-types)
+   * [Binary tree](#binary-tree)
+- [Searching](#searching)
+   * [Linear search](#linear-search)
+   * [Binary Search](#binary-search)
+   * [Jump Search](#jump-search)
+   * [Interpolation Search](#interpolation-search)
+   * [Exponential Search](#exponential-search)
+   * [Fibonacci Search](#fibonacci-search)
+   * [Breadth-First Search (BFS) and Depth-First Search (DFS)](#breadth-first-search-bfs-and-depth-first-search-dfs)
+   * [A* Search Algorithm](#a-search-algorithm)
+- [Sorting](#sorting)
+   * [Built-in sort() function](#built-in-sort-function)
+   * [Built-in sorted() function](#built-in-sorted-function)
+   * [Bubble Sort](#bubble-sort)
+   * [Insertion Sort](#insertion-sort)
+   * [Quick Sort](#quick-sort)
+   * [Merge Sort](#merge-sort)
+- [Timing the function](#timing-the-function)
+   * [Time module](#time-module)
+   * [timeit module](#timeit-module)
+   * [And you can do some magic with this:](#and-you-can-do-some-magic-with-this)
+   * [Decorator](#decorator-1)
+   * [Or if you use jupyter notebook, we can use the magic command `%%time`:](#or-if-you-use-jupyter-notebook-we-can-use-the-magic-command-time)
+
+<!-- TOC end -->
+
+<!-- TOC --><a name="algorithms"></a>
 ## Algorithms
 
 An algorithm is a step-by-step procedure to solve a particular problem or to achieve a specific outcome. It’s like a recipe that describes the exact steps needed for a computer to solve a problem or reach a goal.
@@ -23,6 +129,7 @@ print(bubble_sort(numbers))
     [11, 12, 22, 25, 34, 64, 90]
 
 
+<!-- TOC --><a name="programming-languages"></a>
 ## Programming languages
 
 Programming languages are tools that allow developers to write instructions for computers to execute. They provide a way for humans to communicate with machines in a format that both can understand.
@@ -37,6 +144,7 @@ print("Hello world!")
     Hello world!
 
 
+<!-- TOC --><a name="intepreter-and-compiler"></a>
 ## Intepreter and compiler
 
 Programming languages are tools that allow developers to write instructions for computers to execute. They provide a way for humans to communicate with machines in a format that both can understand.
@@ -47,6 +155,7 @@ Differences:
 
 - A compiler translates the entire program into machine code before execution. If there are any errors, they are reported after the compilation process, not during runtime.
 
+<!-- TOC --><a name="printing"></a>
 ## Printing
 
 To print in python, we use the function print.
@@ -82,6 +191,7 @@ print("abc")
     Hello world!---abc
 
 
+<!-- TOC --><a name="operators"></a>
 ## Operators
 
 | Notation | Meaning |
@@ -127,6 +237,7 @@ print(pow(2, 3))
 
 
 
+<!-- TOC --><a name="errors"></a>
 ## Errors
 
 There are a lot of types of errors, knowing the total amounts of error is nearly impossible. Here are some errors that are derived from 'Exception' and 'BaseException':
@@ -159,6 +270,7 @@ print([err.__name__ for err in Exception.__subclasses__()])
 
 *See more about those errors from this link: https://docs.python.org/2/library/exceptions.html#exception-hierarchy*
 
+<!-- TOC --><a name="however"></a>
 ## However
 
 During the lecture, we are taught that there are 4 types of main errors:
@@ -168,6 +280,7 @@ During the lecture, we are taught that there are 4 types of main errors:
 - Logic errors
 - Semantic errors
 
+<!-- TOC --><a name="syntax-error"></a>
 ### Syntax error
 
 These are errors where the code is not valid (generally syntax or indentation errors). The Python interpreter can’t understand the code. For example, forgetting to close a parenthesis:
@@ -185,6 +298,7 @@ print("Hello, World!"
 
 
 
+<!-- TOC --><a name="runtime-error"></a>
 ### Runtime error
 
 A runtime error is an error that occurs during the execution of a program. These errors are typically detected after the syntax of the code has been checked and are usually caused by illegal operations such as division by zero or attempting to access out-of-bounds array elements. Runtime errors can also be caused by resources not being available, like trying to open a file that doesn’t exist.
@@ -210,6 +324,7 @@ print(5 / 0)
     ZeroDivisionError: division by zero
 
 
+<!-- TOC --><a name="logic-error"></a>
 ### Logic error
 
 A logic error occurs when a program doesn’t perform as intended due to a flaw in the program’s logic or algorithm. The syntax of the code is correct, but the result is not what you expected.
@@ -226,6 +341,7 @@ print(add_two_numbers(2, 2)) # Gives 0 instead of 4
     0
 
 
+<!-- TOC --><a name="semantic-error"></a>
 ### Semantic error
 
 A semantic error is when a programmer misunderstands how the programming language works and writes code that doesn’t make sense in the context of the language’s rules. The code may be syntactically correct, but it violates the rules or “semantics” of the language.
@@ -275,6 +391,7 @@ print('The sum of', num1, 'and', num2, 'is', sum) # Outputs 12 instead of 3
     The sum of 1 and 2 is 12
 
 
+<!-- TOC --><a name="nb"></a>
 ## N.B.
 
 The code below generates `Memory error`. A `MemoryError` in Python is a type of runtime error. It occurs when an operation runs out of memory during the execution of the program.
@@ -288,6 +405,7 @@ However, it’s not a `semantic error` because the syntax and usage of the langu
 [i for i in range(10**19)]
 ```
 
+<!-- TOC --><a name="types"></a>
 ## Types
 
 These are some builting data types:
@@ -336,6 +454,7 @@ type({1,2})
 
 
 
+<!-- TOC --><a name="assign-values-to-variables"></a>
 ## Assign values to variables
 
 This code is assignning the integer `12` to a box called `a`. The `: int` is called type hint, this is not necessary but in this course, we must include that. (Type hints are to check if the value of that variable is as expected, usually checked by `mypy`)
@@ -345,6 +464,7 @@ This code is assignning the integer `12` to a box called `a`. The `: int` is cal
 a: int = 12
 ```
 
+<!-- TOC --><a name="names-in-python"></a>
 ## Names in Python
 
 **Rules:**
@@ -369,6 +489,7 @@ a: int = 12
 
 `as` `elif` `if` `or` `yield`  `assert` `else` `import` `pass` `break`  `except` `in` `raise`
 
+<!-- TOC --><a name="operations-on-string"></a>
 ## Operations on string
 
 We can use `+` and `*`
@@ -397,6 +518,7 @@ We can use `+` and `*`
 
 
 
+<!-- TOC --><a name="get-users-input"></a>
 ## Get user's input
 
 
@@ -409,6 +531,7 @@ print(a + ' something.')
     hello something.
 
 
+<!-- TOC --><a name="boolean-expressions"></a>
 ## Boolean expressions
 
 | **Operator** | **Purpose** |
@@ -420,6 +543,7 @@ print(a + ' something.')
 | `x >= y` | x is greater than or equal to y | 
 | `x <= y` | x is less than or equal to y | 
 
+<!-- TOC --><a name="logical-operators"></a>
 ## Logical operators
 
 | Operator | Technical name | Math symbol | Python construct | 
@@ -428,6 +552,7 @@ print(a + ' something.')
 | Or       | Disjunction    | $\lor$ | `or`   |
 | Not      | Negation       | $\lnot$| `not`  |
 
+<!-- TOC --><a name="special-logical-operators"></a>
 ## Special logical operators
 
 The `in` keyword in Python is used to check if a value exists in a sequence like a `list`, `tuple`, `string`, or `dictionary`. It’s also used to iterate through a sequence in a loop.
@@ -471,6 +596,7 @@ if "name" in person:
     Name is a key
 
 
+<!-- TOC --><a name="condition"></a>
 ## Condition
 
 **If Statement**
@@ -532,6 +658,7 @@ else:
     10 >= 10
 
 
+<!-- TOC --><a name="try-except"></a>
 ## Try - Except:
 
 ```python
@@ -567,6 +694,7 @@ finally:
     Always see this
 
 
+<!-- TOC --><a name="pass-continue-break"></a>
 ## Pass, Continue, Break
 
 
@@ -599,6 +727,7 @@ for i in range(5):
     1
 
 
+<!-- TOC --><a name="indexing-and-slicing"></a>
 ## Indexing and slicing
 
 Can be used for string, list, tuple, set
@@ -695,6 +824,7 @@ a[::-1]
 
 
 
+<!-- TOC --><a name="sequence-data-type"></a>
 ## Sequence data type
 
 A collection of data can be **stored** in a **tuple**, **list**, **set**, or **dictionary**. The difference between using one or the other will depend on the properties you need to represent your data. In the following table, we briefly present the properties of each of these collections.
@@ -708,6 +838,7 @@ A collection of data can be **stored** in a **tuple**, **list**, **set**, or **d
 
 <sup>*</sup> You access key-value pairs via a key.
 
+<!-- TOC --><a name="some-definitions-about-looping"></a>
 ## Some definitions about looping
 
 - **Iterable** is an object which you can iterate over, with `__iter__()` method. `List`, `Set`, `File`... are iterables.
@@ -716,6 +847,7 @@ A collection of data can be **stored** in a **tuple**, **list**, **set**, or **d
 
 - **Iteration** is a general term of describing 1 loop
 
+<!-- TOC --><a name="list"></a>
 ## List
 
 > `len(lst)`
@@ -762,6 +894,7 @@ Remove the first occurence of value
 
 Sort the list, reverse = False means sorting in ascending order
 
+<!-- TOC --><a name="here-are-some-cool-tricks-with-list"></a>
 ## Here are some cool tricks with list:
 
 **Getting the value with highest occurences in a list:**
@@ -794,6 +927,7 @@ max(set(lst), key = lst.count) # max loops through 3*10 iterations
 
 
 
+<!-- TOC --><a name="string"></a>
 ## String
 
 > `s.casefold()` or `s.lower()`
@@ -834,6 +968,7 @@ Ex: `s = "a.b.c"` Then we will get `['a', 'b', 'c']`
 
 Return the length of string `s`
 
+<!-- TOC --><a name="here-are-some-cool-tricks-with-string"></a>
 ## Here are some cool tricks with string:
 
 **Transforming a string to a list of characters:**
@@ -909,6 +1044,7 @@ f(1,2)
     TypeError: 'str' object is not callable
 
 
+<!-- TOC --><a name="tuple"></a>
 ## Tuple
 
 You can use tuple for information that you don't want to modify, like a tuple of `(student_id, name, grade)`
@@ -921,6 +1057,7 @@ Count the number of occurences of that value in the tuple
 
 Return the first index of value
 
+<!-- TOC --><a name="set"></a>
 ## Set
 
 You can use set when you don't want duplicates or you want to sort a sequence
@@ -960,6 +1097,7 @@ Remove `value` from the set
 
 Return the union of sets as a new set.
 
+<!-- TOC --><a name="dictionary"></a>
 ## Dictionary
 
 > `dct.clear()`
@@ -990,6 +1128,7 @@ Return an iterator of values
 
 Create a new dictionary with keys from iterable and values set to value.
 
+<!-- TOC --><a name="here-are-some-cool-tricks-with-dictionary"></a>
 ## Here are some cool tricks with dictionary
 
 **Remove duplicate values in a list without changing the order:**
@@ -1070,6 +1209,7 @@ dct # The number `1` occurred 4 times...
 
 
 
+<!-- TOC --><a name="zipping"></a>
 ## Zipping
 
 The zip() function in Python is a built-in function that allows you to combine corresponding elements from multiple iterable objects (like lists, tuples, etc.) into a single iterable. This resulting iterable contains tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
@@ -1088,6 +1228,7 @@ list(zip(lst1, lst2))
 
 
 
+<!-- TOC --><a name="file-reading"></a>
 ## File reading
 
 **Syntax**
@@ -1126,6 +1267,7 @@ with open("Path_to_file", 'r') as file:
 
 This syntax will auto close the file.
 
+<!-- TOC --><a name="while-loop"></a>
 ## While loop
 
 The while loop in Python is used to repeatedly execute a block of statements as long as a given condition is true. The condition is checked before each iteration, and if it evaluates to False, the loop is terminated and control is passed to the next statement in the program.
@@ -1215,6 +1357,7 @@ lst
 
 
 
+<!-- TOC --><a name="for-loop"></a>
 ## For loop
 
 The for loop in Python is used to iterate over a sequence (like a list, tuple, string, or dictionary) or other iterable objects. Iterating over a sequence is called traversal.
@@ -1288,6 +1431,7 @@ for key, value in person.items():
     age 25
 
 
+<!-- TOC --><a name="function"></a>
 ## Function
 
 In Python, a function is a block of reusable code that performs a specific task. Functions provide better modularity for your application and allow for code reusability.
@@ -1316,10 +1460,12 @@ print(total)
     7
 
 
+<!-- TOC --><a name="testing"></a>
 ## Testing
 
 Testing is a crucial part of software development that involves executing a program or application with the intent of finding software bugs. It can also be used to ensure that the program or application behaves as expected.
 
+<!-- TOC --><a name="assert"></a>
 ### Assert
 
 **Syntax:**
@@ -1358,6 +1504,7 @@ assert add(2, 2) == 4, "Function is wrong"
     AssertionError: Function is wrong
 
 
+<!-- TOC --><a name="doctest"></a>
 ### Doctest
 
 The `doctest` module in Python is used to write tests inside docstrings (In order to use, you must import `doctest`). These tests can be run to verify that the code works as expected. For example:
@@ -1403,6 +1550,7 @@ doctest.run_docstring_examples(add, globals(), verbose = True, name = "add")
     ok
 
 
+<!-- TOC --><a name="pytest"></a>
 ### Pytest
 
 `Pytest` is a testing framework in Python that allows you to easily create small, simple tests, yet scales to support complex functional testing for applications and libraries. An example of a simple test:
@@ -1448,14 +1596,17 @@ def test_<test_name>(<fixture_name>):
     assert <fixture_name> == ...
 ```
 
+<!-- TOC --><a name="ipytest"></a>
 ### IPytest
 
 `IPytest` is a pytest plugin for IPython and Jupyter. It allows you to run pytest inside Jupyter notebooks and IPython interactive shells.
 
+<!-- TOC --><a name="doctest-vs-pytest"></a>
 ### Doctest vs Pytest
 
 `Doctest` allows you to write tests inside docstrings which can double as documentation. `Pytest` requires separate functions for tests but is more powerful and flexible than doctest. It’s often easier to start with doctest for simple scenarios and switch to pytest as your testing needs become more complex.
 
+<!-- TOC --><a name="json"></a>
 ## JSON
 
 This is a library which is used to turn json file into a list of dictionary
@@ -1467,10 +1618,12 @@ with open("Path_to_file.json", 'r') as file:
     jsonfile = json.load(file)
 ```
 
+<!-- TOC --><a name="csv"></a>
 ## CSV
 
 The `csv` module in Python is used to read from and write to CSV (Comma Separated Values) files. CSV files are a common file format for data manipulation and are supported by many applications, including spreadsheets like Excel, Google Sheets, and database management systems.
 
+<!-- TOC --><a name="csvreader"></a>
 ### csv.reader()
 
 This function returns a reader object which iterates over lines in the specified CSV file. Here’s an example (In this example, each row read from the CSV file is returned as a list of strings):
@@ -1484,6 +1637,7 @@ with open('file.csv', 'r') as file:
         print(row)
 ```
 
+<!-- TOC --><a name="csvwriter"></a>
 ### csv.writer()
 
 This function returns a writer object responsible for converting the user’s data into delimited strings on the given file-like object. Here’s an example (In this example, data is written to a CSV file using the `writerow()` method):
@@ -1498,6 +1652,7 @@ with open('file.csv', 'w', newline='') as file:
     writer.writerow([2, "Tim Berners-Lee", "World Wide Web"])
 ```
 
+<!-- TOC --><a name="csvdictreader"></a>
 ### csv.DictReader()
 
 This function creates an object that operates like a regular reader but maps the information read into a dictionary. The keys for the dictionary can be passed in with the fieldnames parameter or inferred from the first row of the CSV file.
@@ -1511,10 +1666,12 @@ with open('file.csv', 'r') as file:
         print(row)
 ```
 
+<!-- TOC --><a name="comprehensions"></a>
 ## Comprehensions
 
 Comprehensions in Python provide a concise way to create lists, dictionaries, and sets based on existing iterables, while also allowing for conditionals and transformations. They’re a key feature of Python that can make your code more readable and efficient.
 
+<!-- TOC --><a name="list-comprehensions"></a>
 ### List Comprehensions
 
 They create a new list from an existing list (or other iterable) according to some expression. For example:
@@ -1548,6 +1705,7 @@ lst
 
 
 
+<!-- TOC --><a name="dictionary-comprehensions"></a>
 ### Dictionary Comprehensions
 They create a new dictionary from an existing iterable. For example:
 
@@ -1564,6 +1722,7 @@ numbers = [1, 2, 3, 4, 5]
 
 
 
+<!-- TOC --><a name="set-comprehensions"></a>
 ### Set Comprehensions
 
 They create a new set from an existing iterable. For example:
@@ -1581,6 +1740,7 @@ numbers = [1, 2, 2, 3, 4, 4, 5, 5]
 
 
 
+<!-- TOC --><a name="some-cool-tricks-with-comprehension"></a>
 ### Some cool tricks with comprehension
 
 **If condition in a comprehension:**
@@ -1645,6 +1805,7 @@ newset = set()
 
 
 
+<!-- TOC --><a name="generator"></a>
 ## Generator
 
 A generator in Python is a special type of function that returns an iterable sequence of results, but instead of computing all the values upfront and storing them in memory (like a list), it generates each value on-the-fly as you iterate over the sequence. This can be very memory-efficient for large sequences where you don’t need all the values at once.
@@ -1726,6 +1887,7 @@ next(factorial(5))
 
 In this case, I used the method `next()` to get the value of the generator.
 
+<!-- TOC --><a name="regular-expression-re"></a>
 ## Regular Expression (re)
 
 *You can use the site https://regexr.com/ to test your `re`*
@@ -1818,6 +1980,7 @@ print(re.split(pattern, sequence))
     ['', ' Monster']
 
 
+<!-- TOC --><a name="special-characters"></a>
 ### Special Characters
 
 | Character | Description |
@@ -1833,6 +1996,7 @@ print(re.split(pattern, sequence))
 | `{n}` | Matches an expression `n` times |
 | `{n, m}` | Matches an expression from `n` to `m` times |
 
+<!-- TOC --><a name="character-classes"></a>
 ### Character Classes
 
 | Character | Description |
@@ -1845,6 +2009,7 @@ print(re.split(pattern, sequence))
 | `\b` | Matches the empty string, but only at the start or end of a word |
 | `\B` | Matches the empty string, but not at the start or end of a word |
 
+<!-- TOC --><a name="sets"></a>
 ### Sets
 
 | Character | Description |
@@ -1858,6 +2023,7 @@ print(re.split(pattern, sequence))
 | `[+*().]` | Matches special characters as literals |
 | `[^ab]` | Matches any character except `a` and `b` |
 
+<!-- TOC --><a name="but-what-if-you-cant-remember-everything-of-these"></a>
 ## But what if you can't remember everything of these
 
 **Then you can only do the hard way:**
@@ -1893,6 +2059,7 @@ Then, once reached the word `BIANCA`, I used the `.(.+).`, the 2 dots on 2 sides
 
 Finally, I reach the character using `match.group()`, and the function `.group()` starts counting from 1.
 
+<!-- TOC --><a name="exploratory-data-analysis"></a>
 ## Exploratory Data Analysis
 
 This part is self-study, it's not important for this course, but it is for other courses in the future.
@@ -1905,6 +2072,7 @@ Another main purpose of EDA is to help look at data before making any assumption
 
 Once EDA is complete and insights are drawn, its features can then be used for more sophisticated data analysis or modeling, including machine learning. In summary, EDA is a crucial step in the data analysis process that allows data scientists to understand the data better, make necessary assumptions, and formulate suitable models for further analysis.
 
+<!-- TOC --><a name="structured-data"></a>
 ### Structured data
 
 (This part is from the lecture)
@@ -1926,6 +2094,7 @@ Structured data usually comes in two flavors:
 | Binary      | Categorical | `bool`        |
 | Ordinal     | Categorical | `str`, `int`  |
 
+<!-- TOC --><a name="rectangular-data"></a>
 ### Rectangular data
 
 `Rectangular data`, also known as multivariate cross-sectional data, is a common type of structured data that is used in statistical and machine learning models. It’s often compared to a spreadsheet or a single table in a relational database.
@@ -1940,10 +2109,12 @@ Here are some key terms related to rectangular data:
 
 Rectangular data can be derived from various sources such as sensor measurements, events, text, images, and videos. For example, text data can be converted to rectangular data where each column represents a word, each row represents a document, and each cell entry represents the frequency or presence/absence of that word in the document.
 
+<!-- TOC --><a name="pandas"></a>
 ### Pandas
 
 We don't use pandas in this course, but it is a powerful tool.
 
+<!-- TOC --><a name="location-measures"></a>
 ### Location measures
 
 `Location measures`, also known as measures of central tendency, are statistical values that attempt to describe a set of data by identifying the central position within that set of data. These measures indicate where most values in a distribution fall and are also referred to as the central location of a distribution. The most common location measures are the mean, median, and mode.
@@ -1954,6 +2125,7 @@ We don't use pandas in this course, but it is a powerful tool.
 
 * **Mode:** The mode is the number that appears most frequently in a data set. A set of data may have one mode, more than one mode, or no mode at all. For example, the mode of `{4, 2, 4, 3, 2, 2}` is `2` because it occurs three times, which is more than any other number.
 
+<!-- TOC --><a name="another-way-to-calculate-those-location-measures-in-python-statistics-library"></a>
 #### Another way to calculate those location measures in Python: statistics library
 
 ```python
@@ -1964,6 +2136,7 @@ median = statistics.median(your_list)
 mode = statistics.mode(your_list)
 ```
 
+<!-- TOC --><a name="variability-measures"></a>
 ### Variability measures
 
 `Variability measures`, also known as measures of dispersion, are statistical values that describe the spread or dispersion of a set of data. These measures indicate how spread out the values in a distribution are around the central value. The most common variability measures are variance, standard deviation, and range.
@@ -1984,6 +2157,7 @@ mode = statistics.mode(your_list)
     - Quartiles are the values that divide a list of numerical data into quarters. There are three quartiles: Q1 (the first quartile), Q2 (the second quartile or median), and Q3 (the third quartile).
     - The formula for interquartile range is: Interquartile range = Upper Quartile – Lower Quartile = Q3 – Q1 where Q1 is the first quartile and Q3 is the third quartile of the series.
     
+<!-- TOC --><a name="data-distribution"></a>
 ### Data distribution
 
 A data distribution is a function or a listing which shows all the possible values (or intervals) of the data and how often they occur. When a dataset is plotted, the resulting graph gives an overview of all the possible values in the dataset and how often they occur. There are two types of data distribution based on two different kinds of data: `Discrete` and `Continuous`.
@@ -2008,6 +2182,7 @@ Suppose we have a dataset that shows the height of 17 different plants (in inche
 
 This data can be now shown using a histogram.
 
+<!-- TOC --><a name="oop"></a>
 ## OOP
 
 * **Four pillars of OOP:**
@@ -2093,6 +2268,7 @@ This data can be now shown using a histogram.
 
         ```
 
+<!-- TOC --><a name="class"></a>
 ## Class
 
 * A `class` is a blueprint for creating objects. 
@@ -2103,6 +2279,7 @@ class a:
     # some codes
 ```
 
+<!-- TOC --><a name="attributes"></a>
 ### Attributes
 
 We have 2 types of attributes:
@@ -2151,6 +2328,7 @@ obj.CLS_ATTR
 
 
 
+<!-- TOC --><a name="methods"></a>
 ### Methods
 
 Methods are function that are inside a class. We have 3 general types of method:
@@ -2173,6 +2351,7 @@ def my_class_method(cls, *params):
     # some codes
 ```
 
+<!-- TOC --><a name="properties"></a>
 ### Properties
 
 In Python, a property is a way to access attributes of a class. A property in Python provides an interface for instance variables, it encapsulates instance variables and provides indirect access to them. There are three parts to a property:
@@ -2237,6 +2416,7 @@ print(boat.move())
     Sail
 
 
+<!-- TOC --><a name="decorator"></a>
 ### Decorator
 
 **The `@` symbol is used for class and function `decorators`. Some common python decorators:**
@@ -2319,6 +2499,7 @@ print(pizza)
     ['cheese', 'sauce']
 
 
+<!-- TOC --><a name="recursion"></a>
 ## Recursion
 
 `Recursion` is a common mathematical and programming concept where a function calls itself.
@@ -2398,10 +2579,12 @@ fibonacci(5)
 
 
 
+<!-- TOC --><a name="recursive-data-types"></a>
 ## Recursive data types
 
 A recursive data type is a data type for values that may contain other values of the same type. Data of recursive types are usually viewed as directed graphs.
 
+<!-- TOC --><a name="binary-tree"></a>
 ### Binary tree
 
 An example of a recursive data type is a binary tree. A binary tree is a tree-like data structure where each node has at most two children, referred to as the left child and the right child. For each node, the left child’s key must be less than the node’s key, and the right child’s key must be greater than the node’s key.
@@ -2464,12 +2647,14 @@ root.print_tree()
 * **Perfect Binary Tree:** A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level. The number of leaf nodes is the number of internal nodes plus 1.
 * **Balanced Binary Tree:** A balanced binary tree, also known as a height-balanced binary tree, is defined to be a binary tree in which the height of the left and right subtree of any node differ by not more than 1.
 
+<!-- TOC --><a name="searching"></a>
 ## Searching
 
 Searching in Python is a fundamental operation that involves finding a specific value or a set of values that match a condition from a collection of items such as a list, an array, or a set.
 
 **Some common searching methods:**
 
+<!-- TOC --><a name="linear-search"></a>
 ### Linear search
 
 This is the simplest form of searching. It involves iterating over each element in the list one by one until the desired element is found.
@@ -2483,6 +2668,7 @@ def linear_search(arr, x):
     return -1
 ```
 
+<!-- TOC --><a name="binary-search"></a>
 ### Binary Search
 
 This method is used on sorted lists. It works by repeatedly dividing the list in half until the desired element is found. Here’s an example:
@@ -2502,6 +2688,7 @@ def binary_search(arr, low, high, x):
         return -1
 ```
 
+<!-- TOC --><a name="jump-search"></a>
 ### Jump Search
 
 Like Binary Search, Jump Search is a searching algorithm for sorted arrays. The basic idea is to check fewer elements by jumping ahead fixed steps or skipping some elements instead of searching all elements.
@@ -2528,6 +2715,7 @@ def jump_search(arr, x):
     return -1
 ```
 
+<!-- TOC --><a name="interpolation-search"></a>
 ### Interpolation Search
 
 This method works better than Binary Search for lists where the values are uniformly distributed. It tries to follow the way humans search a list by starting from where we think the item may be.
@@ -2548,6 +2736,7 @@ def interpolation_search(arr, x):
     return -1
 ```
 
+<!-- TOC --><a name="exponential-search"></a>
 ### Exponential Search
 
 This method involves two steps: finding a range where the element might be present and then performing Binary Search within that range.
@@ -2573,6 +2762,7 @@ def exponential_search(arr, n, x):
     return binary_search( arr, i // 2, min(i, n-1), x)
 ```
 
+<!-- TOC --><a name="fibonacci-search"></a>
 ### Fibonacci Search
 
 This method works by dividing the array into unequal parts based on Fibonacci numbers and uses these numbers to search for an element.
@@ -2603,6 +2793,7 @@ def fibonacci_search(arr, x):
             return i
 ```
 
+<!-- TOC --><a name="breadth-first-search-bfs-and-depth-first-search-dfs"></a>
 ### Breadth-First Search (BFS) and Depth-First Search (DFS)
 
 These are techniques used for traversing or searching tree or graph data structures.
@@ -2635,6 +2826,7 @@ dfs(graph, '0')
 
 
 
+<!-- TOC --><a name="a-search-algorithm"></a>
 ### A* Search Algorithm
 
 It’s one of the best and popular techniques used in path-finding and graph traversals.
@@ -2669,12 +2861,14 @@ def a_star(graph, start_node, end_node):
     return came_from, cost_so_far
 ```
 
+<!-- TOC --><a name="sorting"></a>
 ## Sorting
 
 Sorting is the process of arranging data in a particular format. In Python, there are several methods to sort data, including built-in functions and manual implementations. 
 
 **Some common sorting methods:**
 
+<!-- TOC --><a name="built-in-sort-function"></a>
 ### Built-in sort() function
 
 Python’s list objects have a built-in `sort()` function that can be used to sort the items in the list in ascending order.
@@ -2689,6 +2883,7 @@ print(numbers)
     [1, 2, 3, 4]
 
 
+<!-- TOC --><a name="built-in-sorted-function"></a>
 ### Built-in sorted() function
 
 Python also provides a built-in function `sorted()`, which returns a new sorted list from the items in any sequence instead of just sorting the list like `sort()` function.
@@ -2703,6 +2898,7 @@ print(sorted_numbers)
     [1, 2, 3, 4]
 
 
+<!-- TOC --><a name="bubble-sort"></a>
 ### Bubble Sort
 
 It is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
@@ -2725,6 +2921,7 @@ bubble_sort([1, 3, 4, 2])
 
 
 
+<!-- TOC --><a name="insertion-sort"></a>
 ### Insertion Sort
 
 It is a simple sorting algorithm that builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort or merge sort.
@@ -2750,6 +2947,7 @@ insertion_sort([1, 3, 4, 2])
 
 
 
+<!-- TOC --><a name="quick-sort"></a>
 ### Quick Sort
 
 It is an efficient sorting algorithm that uses divide-and-conquer principles to divide a list into two sub-lists. The steps are:
@@ -2786,6 +2984,7 @@ quick_sort([1, 3, 4, 2], 0, len([1,3,4,2]) - 1)
 
 
 
+<!-- TOC --><a name="merge-sort"></a>
 ### Merge Sort
 
 It is an efficient sorting algorithm that uses divide-and-conquer principles to divide the unsorted list into n sub-lists, each containing one element (a list of one element is considered sorted), and then repeatedly merge sub-lists to produce new sorted sub-lists until there is only one sub-list remaining.
@@ -2828,12 +3027,14 @@ merge_sort([1, 3, 4, 2])
 
 
 
+<!-- TOC --><a name="timing-the-function"></a>
 ## Timing the function
 
 Timing functions in Python can be important for performance testing and optimization. Python provides several ways to time your code.
 
 **There are some ways of doing this:**
 
+<!-- TOC --><a name="time-module"></a>
 ### Time module
 
 The simplest way to time a function in Python is using the time module.
@@ -2860,6 +3061,7 @@ print(f"The function took {execution_time} seconds to complete")
     The function took 0.000102996826171875 seconds to complete
 
 
+<!-- TOC --><a name="timeit-module"></a>
 ### timeit module
 
 For small bits of code, the timeit module is quite handy. It temporarily turns off garbage collection and runs multiple trials to eliminate the influence of other tasks on your machine.
@@ -2885,8 +3087,10 @@ print(f"The function took {execution_time} seconds to complete")
     The function took 0.0002940830308943987 seconds to complete
 
 
+<!-- TOC --><a name="and-you-can-do-some-magic-with-this"></a>
 ### And you can do some magic with this:
 
+<!-- TOC --><a name="decorator-1"></a>
 ### Decorator
 
 We can create a decorator that will measure the elapsed time of the function that it modifies.
@@ -2924,6 +3128,7 @@ bubble_sort([1, 3, 4, 2])
 
 
 
+<!-- TOC --><a name="or-if-you-use-jupyter-notebook-we-can-use-the-magic-command-time"></a>
 ### Or if you use jupyter notebook, we can use the magic command `%%time`:
 
 
