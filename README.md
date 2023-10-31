@@ -2,108 +2,115 @@
 
 # Table of contents
 
-- [Algorithms](#algorithms)
-- [Programming languages](#programming-languages)
-- [Intepreter and compiler](#intepreter-and-compiler)
-- [Printing](#printing)
-- [Operators](#operators)
-- [Errors](#errors)
-- [However](#however)
-   * [Syntax error](#syntax-error)
-   * [Runtime error](#runtime-error)
-   * [Logic error](#logic-error)
-   * [Semantic error](#semantic-error)
-- [N.B.](#nb)
-- [Types](#types)
-- [Assign values to variables](#assign-values-to-variables)
-- [Names in Python](#names-in-python)
-- [Operations on string](#operations-on-string)
-- [Get user's input](#get-users-input)
-- [Boolean expressions](#boolean-expressions)
-- [Logical operators](#logical-operators)
-- [Special logical operators](#special-logical-operators)
-- [Condition](#condition)
-- [Try - Except:](#try-except)
-- [Pass, Continue, Break](#pass-continue-break)
-- [Indexing and slicing](#indexing-and-slicing)
-- [Sequence data type](#sequence-data-type)
-- [Some definitions about looping](#some-definitions-about-looping)
-- [List](#list)
-- [Here are some cool tricks with list:](#here-are-some-cool-tricks-with-list)
-- [String](#string)
-- [Here are some cool tricks with string:](#here-are-some-cool-tricks-with-string)
-- [Tuple](#tuple)
-- [Set](#set)
-- [Dictionary](#dictionary)
-- [Here are some cool tricks with dictionary](#here-are-some-cool-tricks-with-dictionary)
-- [Zipping](#zipping)
-- [File reading](#file-reading)
-- [While loop](#while-loop)
-- [For loop](#for-loop)
-- [Function](#function)
-- [Testing](#testing)
-   * [Assert](#assert)
-   * [Doctest](#doctest)
-   * [Pytest](#pytest)
-   * [IPytest](#ipytest)
-   * [Doctest vs Pytest](#doctest-vs-pytest)
-- [JSON](#json)
-- [CSV](#csv)
-   * [csv.reader()](#csvreader)
-   * [csv.writer()](#csvwriter)
-   * [csv.DictReader()](#csvdictreader)
-- [Comprehensions](#comprehensions)
-   * [List Comprehensions](#list-comprehensions)
-   * [Dictionary Comprehensions](#dictionary-comprehensions)
-   * [Set Comprehensions](#set-comprehensions)
-   * [Some cool tricks with comprehension](#some-cool-tricks-with-comprehension)
-- [Generator](#generator)
-- [Regular Expression (re)](#regular-expression-re)
-   * [Special Characters](#special-characters)
-   * [Character Classes](#character-classes)
-   * [Sets](#sets)
-- [But what if you can't remember everything of these](#but-what-if-you-cant-remember-everything-of-these)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
-   * [Structured data](#structured-data)
-   * [Rectangular data](#rectangular-data)
-   * [Pandas](#pandas)
-   * [Location measures](#location-measures)
-      + [Another way to calculate those location measures in Python: statistics library](#another-way-to-calculate-those-location-measures-in-python-statistics-library)
-   * [Variability measures](#variability-measures)
-   * [Data distribution](#data-distribution)
-- [OOP](#oop)
-- [Class](#class)
-   * [Attributes](#attributes)
-   * [Methods](#methods)
-   * [Properties](#properties)
-   * [Decorator](#decorator)
-- [Recursion](#recursion)
-- [Recursive data types](#recursive-data-types)
-   * [Binary tree](#binary-tree)
-- [Searching](#searching)
-   * [Linear search](#linear-search)
-   * [Binary Search](#binary-search)
-   * [Jump Search](#jump-search)
-   * [Interpolation Search](#interpolation-search)
-   * [Exponential Search](#exponential-search)
-   * [Fibonacci Search](#fibonacci-search)
-   * [Breadth-First Search (BFS) and Depth-First Search (DFS)](#breadth-first-search-bfs-and-depth-first-search-dfs)
-   * [A* Search Algorithm](#a-search-algorithm)
-- [Sorting](#sorting)
-   * [Built-in sort() function](#built-in-sort-function)
-   * [Built-in sorted() function](#built-in-sorted-function)
-   * [Bubble Sort](#bubble-sort)
-   * [Insertion Sort](#insertion-sort)
-   * [Quick Sort](#quick-sort)
-   * [Merge Sort](#merge-sort)
-- [Timing the function](#timing-the-function)
-   * [Time module](#time-module)
-   * [timeit module](#timeit-module)
-   * [And you can do some magic with this:](#and-you-can-do-some-magic-with-this)
-   * [Decorator](#decorator-1)
-   * [Or if you use jupyter notebook, we can use the magic command `%%time`:](#or-if-you-use-jupyter-notebook-we-can-use-the-magic-command-time)
+- [Author](#author)
+   * [Algorithms](#algorithms)
+   * [Programming languages](#programming-languages)
+   * [Intepreter and compiler](#intepreter-and-compiler)
+   * [Printing](#printing)
+   * [Operators](#operators)
+   * [Errors](#errors)
+   * [However](#however)
+      + [Syntax error](#syntax-error)
+      + [Runtime error](#runtime-error)
+      + [Logic error](#logic-error)
+      + [Semantic error](#semantic-error)
+   * [N.B.](#nb)
+   * [Types](#types)
+   * [Assign values to variables](#assign-values-to-variables)
+   * [Names in Python](#names-in-python)
+   * [Operations on string](#operations-on-string)
+   * [Get user's input](#get-users-input)
+   * [Boolean expressions](#boolean-expressions)
+   * [Logical operators](#logical-operators)
+   * [Special logical operators](#special-logical-operators)
+   * [Condition](#condition)
+   * [Try - Except:](#try-except)
+   * [Pass, Continue, Break](#pass-continue-break)
+   * [Indexing and slicing](#indexing-and-slicing)
+   * [Sequence data type](#sequence-data-type)
+   * [Some definitions about looping](#some-definitions-about-looping)
+   * [List](#list)
+   * [Here are some cool tricks with list:](#here-are-some-cool-tricks-with-list)
+   * [String](#string)
+   * [Here are some cool tricks with string:](#here-are-some-cool-tricks-with-string)
+   * [Tuple](#tuple)
+   * [Set](#set)
+   * [Dictionary](#dictionary)
+   * [Here are some cool tricks with dictionary](#here-are-some-cool-tricks-with-dictionary)
+   * [Zipping](#zipping)
+   * [File reading](#file-reading)
+   * [While loop](#while-loop)
+   * [For loop](#for-loop)
+   * [Function](#function)
+   * [Testing](#testing)
+      + [Assert](#assert)
+      + [Doctest](#doctest)
+      + [Pytest](#pytest)
+      + [IPytest](#ipytest)
+      + [Doctest vs Pytest](#doctest-vs-pytest)
+   * [JSON](#json)
+   * [CSV](#csv)
+      + [csv.reader()](#csvreader)
+      + [csv.writer()](#csvwriter)
+      + [csv.DictReader()](#csvdictreader)
+   * [Comprehensions](#comprehensions)
+      + [List Comprehensions](#list-comprehensions)
+      + [Dictionary Comprehensions](#dictionary-comprehensions)
+      + [Set Comprehensions](#set-comprehensions)
+      + [Some cool tricks with comprehension](#some-cool-tricks-with-comprehension)
+   * [Generator](#generator)
+   * [Regular Expression (re)](#regular-expression-re)
+      + [Special Characters](#special-characters)
+      + [Character Classes](#character-classes)
+      + [Sets](#sets)
+   * [But what if you can't remember everything of these](#but-what-if-you-cant-remember-everything-of-these)
+   * [Exploratory Data Analysis](#exploratory-data-analysis)
+      + [Structured data](#structured-data)
+      + [Rectangular data](#rectangular-data)
+      + [Pandas](#pandas)
+      + [Location measures](#location-measures)
+         - [Another way to calculate those location measures in Python: statistics library](#another-way-to-calculate-those-location-measures-in-python-statistics-library)
+      + [Variability measures](#variability-measures)
+      + [Data distribution](#data-distribution)
+   * [OOP](#oop)
+   * [Class](#class)
+      + [Attributes](#attributes)
+      + [Methods](#methods)
+      + [Properties](#properties)
+   * [Inheritance](#inheritance)
+      + [Decorator](#decorator)
+   * [Recursion](#recursion)
+   * [Recursive data types](#recursive-data-types)
+      + [Binary tree](#binary-tree)
+   * [Searching](#searching)
+      + [Linear search](#linear-search)
+      + [Binary Search](#binary-search)
+      + [Jump Search](#jump-search)
+      + [Interpolation Search](#interpolation-search)
+      + [Exponential Search](#exponential-search)
+      + [Fibonacci Search](#fibonacci-search)
+      + [Breadth-First Search (BFS) and Depth-First Search (DFS)](#breadth-first-search-bfs-and-depth-first-search-dfs)
+      + [A* Search Algorithm](#a-search-algorithm)
+   * [Sorting](#sorting)
+      + [Built-in sort() function](#built-in-sort-function)
+      + [Built-in sorted() function](#built-in-sorted-function)
+      + [Bubble Sort](#bubble-sort)
+      + [Insertion Sort](#insertion-sort)
+      + [Quick Sort](#quick-sort)
+      + [Merge Sort](#merge-sort)
+   * [Timing the function](#timing-the-function)
+      + [Time module](#time-module)
+      + [timeit module](#timeit-module)
+      + [And you can do some magic with this:](#and-you-can-do-some-magic-with-this)
+      + [Decorator](#decorator-1)
+      + [Or if you use jupyter notebook, we can use the magic command `%%time`:](#or-if-you-use-jupyter-notebook-we-can-use-the-magic-command-time)
 
 <!-- TOC end -->
+
+<!-- TOC --><a name="author"></a>
+# Author
+
+**Khoi, Hoang Bao Khoi Nguyen**
 
 <!-- TOC --><a name="algorithms"></a>
 ## Algorithms
@@ -241,6 +248,7 @@ print(pow(2, 3))
 ## Errors
 
 There are a lot of types of errors, knowing the total amounts of error is nearly impossible. Here are some errors that are derived from 'Exception' and 'BaseException':
+
 
 ```python
 print([err.__name__ for err in BaseException.__subclasses__()])
@@ -2413,6 +2421,81 @@ print(boat.move())
     Sail
 
 
+<!-- TOC --><a name="inheritance"></a>
+## Inheritance
+
+To inherit all attributes (including instance attributes and class attributes) from a class, you can use:
+```python
+super().__init__(*params)
+```
+or 
+```python
+parent_class.__init(self, *params)
+```
+
+
+```python
+class parent:
+    AB = 1
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+class child(parent):
+    def __init__(self, c):
+        self.c = c
+        super().__init__(a = 'Letter a', b = 0)
+
+x = child(1)
+```
+
+
+```python
+x.AB
+```
+
+
+
+
+    1
+
+
+
+
+```python
+x.c
+```
+
+
+
+
+    1
+
+
+
+
+```python
+x.a
+```
+
+
+
+
+    'Letter a'
+
+
+
+
+```python
+x.b
+```
+
+
+
+
+    0
+
+
+
 <!-- TOC --><a name="decorator"></a>
 ### Decorator
 
@@ -3148,4 +3231,5 @@ bubble_sort([1, 3, 4, 2])
 
 
     [1, 2, 3, 4]
+
 
