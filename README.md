@@ -242,9 +242,6 @@ print(pow(2, 3))
 
 There are a lot of types of errors, knowing the total amounts of error is nearly impossible. Here are some errors that are derived from 'Exception' and 'BaseException':
 
-If you want to know more about the errors that are not listed, visit this link: https://docs.python.org/2/library/exceptions.html#exception-hierarchy
-
-
 ```python
 print([err.__name__ for err in BaseException.__subclasses__()])
 ```
@@ -268,7 +265,7 @@ print([err.__name__ for err in Exception.__subclasses__()])
     ['TypeError', 'StopAsyncIteration', 'StopIteration', 'ImportError', 'OSError', 'EOFError', 'RuntimeError', 'NameError', 'AttributeError', 'SyntaxError', 'LookupError', 'ValueError', 'AssertionError', 'ArithmeticError', 'SystemError', 'ReferenceError', 'MemoryError', 'BufferError', 'Warning', '_OptionError', '_Error', 'error', 'Verbose', 'Error', 'SubprocessError', 'TokenError', 'StopTokenizing', 'ClassFoundException', 'EndOfBlock', 'TraitError', 'Error', 'Error', '_GiveupOnSendfile', 'error', 'Incomplete', 'TimeoutError', 'InvalidStateError', 'LimitOverrunError', 'QueueEmpty', 'QueueFull', 'Empty', 'Full', 'ArgumentError', 'ZMQBaseError', 'PickleError', '_Stop', 'error', 'error', 'ReturnValueIgnoredError', 'ArgumentError', 'ArgumentTypeError', 'ConfigError', 'ConfigurableError', 'ApplicationError', 'KeyReuseError', 'UnknownKeyError', 'LeakedCallbackError', 'BadYieldError', 'ReturnValueIgnoredError', 'Return', 'InvalidPortNumber', 'error', 'LZMAError', 'RegistryError', '_GiveupOnFastCopy', 'NoIPAddresses', 'BadZipFile', 'LargeZipFile', 'Error', 'BadEntryPoint', 'NoSuchEntryPoint', 'DuplicateKernelError', 'ErrorDuringImport', 'NotOneValueFound', 'CannotEval', 'OptionError', 'BdbQuit', 'Restart', 'ExceptionPexpect', 'PtyProcessError', 'FindCmdError', 'HomeDirError', 'ProfileDirError', 'IPythonCoreError', 'InputRejected', 'GetoptError', 'ErrorToken', 'PrefilterError', 'AliasError', 'Error', 'Warning', 'SpaceInInput', 'DOMException', 'ValidationError', 'EditReadOnlyBuffer', '_Retry', 'InvalidLayoutError', 'HeightIsUnknownError', 'GuardRejection', 'ParserSyntaxError', 'InternalParseError', '_PositionUpdatingFinished', 'SimpleGetItemNotFound', 'UncaughtAttributeError', 'HasNoContext', 'ParamIssue', '_JediError', 'OnErrorLeaf', 'InvalidPythonEnvironment', 'MessageError', 'Error', 'HTTPException', 'InteractivelyDefined', 'KillEmbedded', 'Error', 'ZombieProcessError', 'QueueEmpty', 'QueueFull', 'DebuggerInitializationError', 'ExpatError', 'Error', 'ParserSyntaxError', 'ResolutionError', '_Error', 'UnableToResolveVariableException', 'InvalidTypeInArgsException', 'DistutilsError', 'CCompilerError', 'Error', 'ParserSyntaxError']
 
 
-*See more about those errors from this link: https://docs.python.org/2/library/exceptions.html#exception-hierarchy*
+*If you want to know more about the errors that are not listed, visit this link: https://docs.python.org/2/library/exceptions.html#exception-hierarchy*
 
 <!-- TOC --><a name="however"></a>
 ## However
