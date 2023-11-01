@@ -3,7 +3,7 @@
 
 **Khoi, Hoang Bao Khoi Nguyen**
 
-***N.B.*** Use of this github version if you want to use the table of contents: https://github.com/lmBored/Summary_For_Programming_Course
+***N.B.*** Use this github version if you want to use the table of contents: https://github.com/lmBored/Summary_For_Programming_Course
 
 <!-- TOC --><a name="table-of-contents"></a>
 # Table of contents
