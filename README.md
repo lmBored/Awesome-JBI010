@@ -1,8 +1,17 @@
-# Summary For JBI010
+<!-- TOC --><a name="author"></a>
+# Author
 
+**Khoi, Hoang Bao Khoi Nguyen**
+
+***N.B.*** Use of this github version if you want to use the table of contents: https://github.com/lmBored/Summary_For_Programming_Course
+
+<!-- TOC --><a name="table-of-contents"></a>
 # Table of contents
 
+<!-- TOC start -->
+
 - [Author](#author)
+- [Table of contents](#table-of-contents)
    * [Algorithms](#algorithms)
    * [Programming languages](#programming-languages)
    * [Intepreter and compiler](#intepreter-and-compiler)
@@ -20,11 +29,21 @@
    * [Names in Python](#names-in-python)
    * [Operations on string](#operations-on-string)
    * [Get user's input](#get-users-input)
+   * [Formatting](#formatting)
+      + [str.format()](#strformat)
+      + [String Modulo (%)](#string-modulo-)
+      + [Template Strings](#template-strings)
+      + [f-strings](#f-strings)
+         - [Dynamic Expressions inside f-strings (Cool tricks):](#dynamic-expressions-inside-f-strings-cool-tricks)
+   * [Some builtin functions](#some-builtin-functions)
+   * [Filter](#filter)
+   * [Map](#map)
+   * [Reduce](#reduce)
    * [Boolean expressions](#boolean-expressions)
    * [Logical operators](#logical-operators)
    * [Special logical operators](#special-logical-operators)
    * [Condition](#condition)
-   * [Try - Except](#try-except)
+   * [Try - Except:](#try-except)
    * [Pass, Continue, Break](#pass-continue-break)
    * [Indexing and slicing](#indexing-and-slicing)
    * [Sequence data type](#sequence-data-type)
@@ -39,6 +58,8 @@
    * [Here are some cool tricks with dictionary](#here-are-some-cool-tricks-with-dictionary)
    * [Zipping](#zipping)
    * [File reading](#file-reading)
+      + [Some functions to work with file](#some-functions-to-work-with-file)
+   * [OS](#os)
    * [While loop](#while-loop)
    * [For loop](#for-loop)
    * [Function](#function)
@@ -101,16 +122,11 @@
    * [Timing the function](#timing-the-function)
       + [Time module](#time-module)
       + [timeit module](#timeit-module)
-      + [And you can do some magic with this](#and-you-can-do-some-magic-with-this)
+      + [And you can do some magic with this:](#and-you-can-do-some-magic-with-this)
       + [Decorator](#decorator-1)
-      + [Or if you use jupyter notebook, we can use the magic command `%%time`](#or-if-you-use-jupyter-notebook-we-can-use-the-magic-command-time)
+      + [Or if you use jupyter notebook, we can use the magic command `%%time`:](#or-if-you-use-jupyter-notebook-we-can-use-the-magic-command-time)
 
 <!-- TOC end -->
-
-<!-- TOC --><a name="author"></a>
-# Author
-
-**Khoi, Hoang Bao Khoi Nguyen**
 
 <!-- TOC --><a name="algorithms"></a>
 ## Algorithms
@@ -536,6 +552,193 @@ print(a + ' something.')
     hello something.
 
 
+<!-- TOC --><a name="formatting"></a>
+## Formatting
+
+In Python, strings can be formatted using several techniques. However, the most powerful technique is `f-strings`.
+
+<!-- TOC --><a name="strformat"></a>
+### str.format()
+
+
+```python
+name = "Alice"
+print("Hello, {}!".format(name))
+```
+
+    Hello, Alice!
+
+
+<!-- TOC --><a name="string-modulo-"></a>
+### String Modulo (%)
+
+
+```python
+name = "Alice"
+print("Hello, %s!" % name)
+```
+
+    Hello, Alice!
+
+
+<!-- TOC --><a name="template-strings"></a>
+### Template Strings
+
+
+```python
+from string import Template
+name = "Alice"
+t = Template('Hello, $name!')
+print(t.substitute(name=name))
+```
+
+    Hello, Alice!
+
+
+<!-- TOC --><a name="f-strings"></a>
+### f-strings
+
+In Python, `f-strings`, also known as formatted string literals, are a way to embed expressions inside string literals, using curly braces `{}`. The expressions will be replaced with their values when the string is created. The leading f before the string indicates that it is a formatted string.
+
+**Basic usage:**
+
+
+```python
+name = "Alice"
+print(f"Hello, {name}!")
+```
+
+    Hello, Alice!
+
+
+**Expressions inside f-strings:**
+
+
+```python
+a = 5
+b = 10
+print(f"Five plus ten is {a + b}, not {2 * (a + b)}.")
+```
+
+    Five plus ten is 15, not 30.
+
+
+**Precision in f-strings:**
+
+
+```python
+from math import pi
+print(f"The value of pi to two decimal places is {pi:.2f}")
+```
+
+    The value of pi to two decimal places is 3.14
+
+
+<!-- TOC --><a name="dynamic-expressions-inside-f-strings-cool-tricks"></a>
+#### Dynamic Expressions inside f-strings (Cool tricks):
+
+
+```python
+item = "apple"
+count = 5
+print(f"There {'is' if count == 1 else 'are'} {count} {item if count == 1 else item+'s'}.")
+```
+
+    There are 5 apples.
+
+
+<!-- TOC --><a name="some-builtin-functions"></a>
+## Some builtin functions
+
+`min()`: Returns the smallest item in an iterable or the smallest of two or more arguments.
+
+```python
+print(min(1, 2, 3, 4))  # Output: 1
+```
+
+`max()`: Returns the largest item in an iterable or the largest of two or more arguments.
+```python
+print(max(1, 2, 3, 4))  # Output: 4
+```
+
+`abs()`: Returns the absolute value of a number.
+```python
+print(abs(-5))  # Output: 5
+```
+
+`len()`: Returns the number of items in a container.
+```python
+print(len("Hello"))  # Output: 5
+```
+
+`divmod(x,y)`: Takes two numbers and returns a pair of numbers (a tuple) consisting of their quotient and remainder.
+```python
+print(divmod(8, 3))  # Output: (2, 2)
+```
+
+`pow(x,y)`: Returns x to the power y.
+```python
+print(pow(2, 3))  # Output: 8
+```
+
+`pow(x,y,z)`: Returns x to the power y, modulo z.
+```python
+print(pow(2, 3, 3))  # Output: 2
+```
+
+`round(num, y)`: Rounds a number to a certain number of precision digits.
+```python
+print(round(3.14159, 2))  # Output: 3.14
+```
+
+`isinstance(x,y)`: Checks if the object (first argument) is an instance or subclass of classinfo class (second argument).
+```python
+print(isinstance(5, int))  # Output: True
+```
+
+`range()` and `xrange()`: These are functions to generate lists of numbers. 
+- `range()` returns a list
+- `xrange()` returns an xrange object, which is kind of like an iterator and generates the numbers on demand.
+(Note: In Python 3.x, xrange() has been deprecated and range() now behaves like xrange() used to behave.)
+
+<!-- TOC --><a name="filter"></a>
+## Filter
+
+The `filter()` function constructs an iterator from elements of an iterable for which a function returns true.
+```python
+def is_even(num):
+    return num % 2 == 0
+
+even_numbers = filter(is_even, range(10))
+print(list(even_numbers))  # Output: [0, 2, 4, 6, 8]
+```
+
+<!-- TOC --><a name="map"></a>
+## Map
+
+The `map()` function applies a given function to each item of an iterable (such as list, tuple etc.) and returns a list of the results.
+```python
+def square(num):
+    return num ** 2
+
+squared = map(square, range(10))
+print(list(squared))  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+<!-- TOC --><a name="reduce"></a>
+## Reduce
+
+The `reduce()` function is a part of `functools` module (in Python 3.x) and it applies a rolling computation to sequential pairs of values in a list. 
+```python
+from functools import reduce
+
+def multiply(x,y):
+    return x * y
+
+product = reduce(multiply, [1, 2, 3, 4])
+print(product)  # Output: 24
+```
+
 <!-- TOC --><a name="boolean-expressions"></a>
 ## Boolean expressions
 
@@ -900,7 +1103,7 @@ Remove the first occurence of value
 Sort the list, reverse = False means sorting in ascending order
 
 <!-- TOC --><a name="here-are-some-cool-tricks-with-list"></a>
-## Here are some cool tricks with list:
+## Here are some cool tricks with list
 
 **Getting the value with highest occurences in a list:**
 
@@ -974,7 +1177,7 @@ Ex: `s = "a.b.c"` Then we will get `['a', 'b', 'c']`
 Return the length of string `s`
 
 <!-- TOC --><a name="here-are-some-cool-tricks-with-string"></a>
-## Here are some cool tricks with string:
+## Here are some cool tricks with string
 
 **Transforming a string to a list of characters:**
 
@@ -1031,22 +1234,10 @@ f(1,2)
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    Cell In[90], line 3
-          1 def f(*a):
-          2     return sum(a) / len(a)
-    ----> 3 f(1,2)
 
 
-    Cell In[90], line 2, in f(*a)
-          1 def f(*a):
-    ----> 2     return sum(a) / len(a)
+    1.5
 
-
-    TypeError: 'str' object is not callable
 
 
 <!-- TOC --><a name="tuple"></a>
@@ -1271,6 +1462,83 @@ with open("Path_to_file", 'r') as file:
 ```
 
 This syntax will auto close the file.
+
+<!-- TOC --><a name="some-functions-to-work-with-file"></a>
+### Some functions to work with file
+
+**Read the whole files:**
+```python
+file.read()
+```
+
+**Find a line that start with a letter:**
+```python
+for line in file:
+    line.startwith('letter')
+```
+
+**Find a letter:**
+```python
+for line in file:
+    line.find('letter')
+```
+
+**Writes a string to a files:** (If you want to write on a new line, you need to include the newline character (\n).)
+```python
+file.write(str)
+```
+
+<!-- TOC --><a name="os"></a>
+## OS
+
+The `os` module in Python provides functions for interacting with the operating system. This module comes under Python’s standard utility modules, so when you install Python, the os module is automatically included.
+
+To use the functions provided by the os module, you need to import it into your Python script.
+```python
+import os
+```
+
+**Here are a few examples of what you can do with the os module:**
+
+> `os.name`
+
+This function gives the name of the imported operating system dependent module.
+
+> `os.getcwd()`
+
+This function allows you to see what your current working directory is.
+
+> `os.listdir()`
+
+This function allows you to see all the files in the directory you specify.
+
+> `os.mkdir()`
+
+This function allows you to create a new directory.
+
+> `os.rename()`
+
+This function allows you to rename a file or a directory.
+
+> `os.getcwd()`
+
+This function returns the current working directory (cwd) as a string. This is the folder where your Python script is being executed.
+
+> `os.path.abspath()`
+
+This function returns the absolute path of a file or directory. An absolute path is the complete address of a file or directory, starting from the root directory.
+
+> `os.path.exists()`
+
+This function checks if a file or directory exists at the given path. It returns True if the file or directory exists and False otherwise.
+
+> `os.path.isdir()`
+
+This function checks if the path exists and is a directory. It returns True if the path is a directory and False otherwise.
+
+> `os.walk()`
+
+This function generates the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple (dirpath, dirnames, filenames).
 
 <!-- TOC --><a name="while-loop"></a>
 ## While loop
@@ -3233,5 +3501,4 @@ bubble_sort([1, 3, 4, 2])
 
 
     [1, 2, 3, 4]
-
 
