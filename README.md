@@ -78,7 +78,7 @@
       + [Methods](#methods)
       + [Properties](#properties)
    * [Inheritance](#inheritance)
-      + [Decorator](#decorator)
+   * [Decorator](#decorator)
    * [Recursion](#recursion)
    * [Recursive data types](#recursive-data-types)
       + [Binary tree](#binary-tree)
@@ -2499,7 +2499,7 @@ x.b
 
 
 <!-- TOC --><a name="decorator"></a>
-### Decorator
+## Decorator
 
 **The `@` symbol is used for class and function `decorators`. Some common python decorators:**
 ```python
