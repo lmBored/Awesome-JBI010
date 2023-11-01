@@ -2278,6 +2278,8 @@ This data can be now shown using a histogram.
 
 * A `class` is a blueprint for creating objects. 
 * `Objects` are instances of a `class`, which can have `properties (attributes)` and `behaviors (methods)`.
+* When comparing 2 objects, Python compares its address, not its attributes.
+* When working with an object, it is suggested to copy the object first. By doing this, you are copying the address of the object, not only the attributes.
 
 ```python
 class a:
