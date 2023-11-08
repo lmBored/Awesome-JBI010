@@ -1257,6 +1257,52 @@ print(f'{c:,}')
     1,002,000
 
 
+**Attention:**
+
+
+```python
+letter = 'A'
+
+if letter = 'B' or 'C' or 'D':
+	print(1)
+else:
+	print(0)
+```
+
+
+
+
+    1
+
+
+This is because the above piece of code is equivalent to this below code, and 'C' and 'D' is a character so it will return True.
+
+```python
+letter = 'A'
+
+if (letter = 'B') or ('C') or ('D'):
+	print(1)
+else:
+	print(0)
+```
+
+So to fix:
+
+```python
+letter = 'A'
+
+if letter in ['B', 'C', 'D']:
+	print(1)
+else:
+	print(0)
+```
+
+
+
+
+    1
+
+
 
 <!-- TOC --><a name="tuple"></a>
 ## Tuple
