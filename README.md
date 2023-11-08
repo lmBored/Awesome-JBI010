@@ -1133,6 +1133,23 @@ max(set(lst), key = lst.count) # max loops through 3*10 iterations
 
 
 
+**Print all duplicates values in a list as a set:**
+
+
+```python
+lst = [1,1,2,3,3,1,3]
+sett = set()
+dupes = {x for x in lst if x in sett or sett.add(x)}
+dupes
+```
+
+
+
+
+    {1, 3}
+
+
+
 <!-- TOC --><a name="string"></a>
 ## String
 
