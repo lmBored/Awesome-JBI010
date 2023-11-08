@@ -1238,6 +1238,26 @@ f(1,2)
 
 
 
+**And here's a different notation for integer:**
+
+
+```python
+a = 1_000_000
+b = 2_000
+c = a + b
+
+print(c)
+print(f'{c:,}')
+```
+
+
+
+
+    1002000
+    1,002,000
+
+
+
 <!-- TOC --><a name="tuple"></a>
 ## Tuple
 
@@ -1400,6 +1420,24 @@ dct # The number `1` occurred 4 times...
 
 
     {1: 4, 2: 2, 3: 4, 4: 2, 32: 1, 5: 1, 6: 1, 7: 1}
+
+
+
+**Dictionary aggregation:
+
+
+```python
+a = {'apple':1, 'banana':2}
+b = {'apple':1, 'banana':3, 'lemon':2}
+
+dct = {k: a.get(k, 0) + b.get(k, 0) for k in zip(a | b)}
+dct
+```
+
+
+
+
+    {'apple':2, 'banana':5, 'lemon':2}
 
 
 
