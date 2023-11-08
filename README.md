@@ -1423,7 +1423,7 @@ dct # The number `1` occurred 4 times...
 
 
 
-**Dictionary aggregation:
+**Dictionary aggregation:**
 
 
 ```python
