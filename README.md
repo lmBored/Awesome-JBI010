@@ -550,6 +550,24 @@ print(a + ' something.')
     hello something.
 
 
+**N.B.**
+```python
+inp = input("Name: ")
+
+if inp:
+	name = inp
+else:
+	name = "N/A"
+```
+
+is equal to
+
+```python
+inp = input("Name: ")
+
+name = inp or "N/A"
+```
+
 <!-- TOC --><a name="formatting"></a>
 ## Formatting
 
