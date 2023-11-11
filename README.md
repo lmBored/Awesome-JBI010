@@ -273,14 +273,6 @@ print([err.__name__ for err in BaseException.__subclasses__()])
 
 
 ```python
-print([err.__name__ for err in BaseException.__subclasses__()])
-```
-
-    ['Exception', 'GeneratorExit', 'SystemExit', 'KeyboardInterrupt', 'CancelledError', 'AbortThread', 'AbortThread']
-
-
-
-```python
 print([err.__name__ for err in Exception.__subclasses__()])
 ```
 
@@ -324,7 +316,7 @@ A runtime error is an error that occurs during the execution of a program. These
 
 For example, dividing by zero:
 
-(However, `ZeroDivisionError` can also be seen as a semantic error in the case that the code is `a/b` and `b` happens to be `0` unintentionally.)
+(However, `ZeroDivisionError` can also be seen as a semantic error in the case that the code is `a/b` and `b` happens to be `0` unintentionally because it didn't the program didn't do what we intend it to do, but it can also be seen as logic error in the case you expected it to produce a number but it produces an error. Overall, it's subjective.)
 
 
 ```python
@@ -348,6 +340,8 @@ print(5 / 0)
 
 A logic error occurs when a program doesn’t perform as intended due to a flaw in the program’s logic or algorithm. The syntax of the code is correct, but the result is not what you expected.
 
+In short, logic error occurs when the program does what we wrote, but it does not match the specification or the expected result.
+
 For example, if you wrote a program to calculate the sum of two numbers but instead it subtracts them, that would be a logic error:
 
 
@@ -364,6 +358,8 @@ print(add_two_numbers(2, 2)) # Gives 0 instead of 4
 ### Semantic error
 
 A semantic error is when a programmer misunderstands how the programming language works and writes code that doesn’t make sense in the context of the language’s rules. The code may be syntactically correct, but it violates the rules or “semantics” of the language.
+
+Summary, semantic error occurs when the program does not do what we intended it to do.
 
 For example, trying to add a string to an integer in Python would be a semantic error because it’s not allowed by the language’s rules. Those are some examples of semantic errors:
 
