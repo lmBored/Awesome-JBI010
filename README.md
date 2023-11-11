@@ -324,7 +324,7 @@ A runtime error is an error that occurs during the execution of a program. These
 
 For example, dividing by zero:
 
-(However, `ZeroDivisionError` can also be seen as logic error in the case that the code is `a/b` and `b` happens to be `0` unintentionally.)
+(However, `ZeroDivisionError` can also be seen as a semantic error in the case that the code is `a/b` and `b` happens to be `0` unintentionally.)
 
 
 ```python
