@@ -2273,6 +2273,18 @@ next(factorial(5))
 
 In this case, I used the method `next()` to get the value of the generator.
 
+**We can also run a certain iterations of a function using generator:**
+
+```python
+def func(list_):
+    for i in list_:
+        yield i	
+
+a = func(data)
+print([next(a) for _ in range(2)])
+```
+
+This will print the first 2 iterations of the function instead of having to go through the whole `list_`. Another way is to use `itertools`.
 <!-- TOC --><a name="regular-expression-re"></a>
 ## Regular Expression (re)
 
