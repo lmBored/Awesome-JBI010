@@ -183,10 +183,18 @@ To print in python, we use the function print.
 
 Syntax is 
 
-> `print(value, sep=' ', end='\n')`
+> `print(value, sep=' ', end='\n', file=sys.stdout)`
 
-'\n' means new line
+`\n` means new line
 
+`sys.stdout` is default, can use `sys.stderr` for errors (print in red), or output the print into a file:
+
+```python
+with open('log.txt', 'a') as file:
+	print(message, file=file)
+```
+
+This will print the `message` into `log.txt`
 
 ```python
 print("Hello world!")
