@@ -221,6 +221,27 @@ print("abc")
 
 
 <!-- TOC --><a name="operators"></a>
+
+### And that's not all, have you ever heard of the flag '\r'?
+```python
+import time
+for x in range (0,5):  
+    b = "Loading" + "." * x
+    print (b, end="\r")
+    time.sleep(1)
+```
+
+This will print the loading dots gradually
+
+```python
+import time
+for x in range (0,5):  
+    print (x, end="\r")
+    time.sleep(1)
+```
+
+And this will print 1, then replace 1 by 2, and so on... Just try it yourself!
+
 ## Operators
 
 | Notation | Meaning |
